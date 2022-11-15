@@ -1,0 +1,46 @@
+
+<div class="container">
+    <h1 style="margin-top: 30px;">Data show using tabular format with lazy loading </h1>
+    <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">alpha_two_code
+            </th>
+            <th scope="col">country
+            </th>
+            <th scope="col">Domains
+            </th>
+            <th scope="col">name
+            </th>
+            <th scope="col">state-province
+            </th>
+          </tr>
+        </thead>
+        <tbody
+        
+        >
+          <tr *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: p }">
+            <td scope="row"> {{post.alpha_two_code}}</td>
+            <td> {{post.country}}</td>
+            <td>{{post.name}}</td>
+            <td>
+                <ul *ngFor="let i of post.domains" style="list-style: none;">
+                    <li>
+                        {{i}}
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul *ngFor="let i of post.web_pages" style="list-style: none;">
+                    <li>
+                        {{i}}
+                    </li>
+                </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div class="container">
+    <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+</div>
