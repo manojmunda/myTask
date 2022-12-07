@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "firstname": "manoj",
+      "lastname": "munda",
+      "email": "mjm@gmail.com",
+      "phone": "35555",
+      "dob": "02/06/1997",
+      "doj": "02/07/2022",
+      "id": 2
+    },
+    {
+      "firstname": "sandesh",
+      "lastname": "morde",
+      "email": "sandesh@gmail.com",
+      "phone": "1234567890",
+      "dob": "2003-06-07",
+      "doj": "2022-12-23",
+      "id": 6
+    },
+    {
+      "firstname": "rohini",
+      "lastname": "shinde",
+      "email": "rohini@gmail.com",
+      "phone": "1234567678",
+      "dob": "2002-08-08",
+      "doj": "2022-12-29",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

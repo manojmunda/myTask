@@ -14,10 +14,7 @@ export class DataComponent implements OnInit {
   constructor(private service:MyServiceService) { }
 
   ngOnInit(): void {
-    this.service.getData().subscribe((res)=>{
-      this.posts=res
-      console.log(res)
-    })
+   
   }
  
 }

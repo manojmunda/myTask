@@ -1,0 +1,39 @@
+<div class="container" style="max-width: 500px;">
+    <h3 class="mb-3 mt-5 text-center">Add User</h3>
+    <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="form-group mt-1">
+            <input type="text" class="form-control" formControlName="firstname" placeholder="firstname">
+            <div *ngIf="m['firstname'].errors?.['required'] && m['firstname'].touched" class="invalid-feedback d-block">Please enter your FirstName</div>
+            <div *ngIf="m['firstname'].errors?.['cannotContainSpace']" class="invalid-feedback d-block">FirstName cannot contain space.</div>  
+          </div>
+          <div class="form-group mt-1">
+            <input type="text" formControlName="lastname" class="form-control" placeholder="lastame">
+            <div *ngIf="m['lastname'].errors?.['required'] && m['lastname'].touched" class="invalid-feedback d-block">Please enter your LastName</div>
+            <div *ngIf="m['lastname'].errors?.['cannotContainSpace']" class="invalid-feedback d-block">LastName cannot contain space.</div>  
+          </div>
+          <div class="form-group mt-1">
+            <input type="text" formControlName="email" class="form-control" placeholder="Email">
+            <div *ngIf="m['email'].errors?.['required'] && m['email'].touched" class="invalid-feedback d-block">Please enter your email</div>
+            <div *ngIf="m['email'].errors?.['pattern'] && m['email'].touched" class="invalid-feedback d-block">Please enter valid email</div>
+            <div *ngIf="m['email'].errors?.['cannotContainSpace']" class="invalid-feedback d-block">Email cannot contain space.</div>  
+          </div>
+          <div class="form-group mt-1">
+            <input type="text" formControlName="phone" class="form-control" placeholder="Phone">
+            <div *ngIf="m['phone'].errors?.['required'] && m['phone'].touched" class="invalid-feedback d-block">Please enter mobile number</div>
+            <div *ngIf="m['phone'].errors?.['pattern'] && m['phone'].touched" class="invalid-feedback d-block">Please enter valid phone number</div> 
+            <div *ngIf="m['phone'].errors?.['cannotContainSpace']" class="invalid-feedback d-block">Phone cannot contain space.</div>    
+          </div>
+          <div class="form-group mt-1">
+            <span>Date Of Birth:</span>
+            <input type="date" formControlName="dob" class="form-control" placeholder="Date Of Birth">
+          </div>
+          <div class="form-group mt-1">
+            <span>Date Of Joining:</span>
+            <input type="date" formControlName="doj" class="form-control" placeholder="Date Of Joining">
+          </div>
+          <div class="form-group mt-3">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Add User</button>
+          </div>
+    </form>
+   
+</div>
